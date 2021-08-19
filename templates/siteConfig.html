@@ -1,0 +1,293 @@
+{% extends 'base.html' %}
+
+<p>{% block title %}Site Config{% endblock %}</p>
+{% block content %}
+<div class="row">
+    <h5>Select a Dataset</h5>
+     <hr>
+<!--    <form method="POST">-->
+    <div class="col-md-3">
+        <p>Dataset</p>
+         <select class="form-select" aria-label="Default select example">
+             {% for row in results %}
+             <option  values="{{ row[0] }}">{{ row[1] }}</option>
+             {% endfor %}
+             </select>
+    </div>
+    <div class="col-md-3">
+        <p>State</p>
+        <select class="form-select" aria-label="Default select example">
+            {% for row in results1 %}
+             <option  values="{{ row[0] }}">{{ row[2] }}</option>
+             {% endfor %}
+<!--          <option selected>City Council</option>-->
+<!--          <option value="1">Planning Commission</option>-->
+<!--          <option value="2">Board Of Adjustment</option>-->
+<!--          <option value="3">Heritage Council</option>-->
+<!--          <option value="4">Architecture</option>-->
+<!--          <option value="5">ReDevelopment</option>-->
+<!--          <option value="6">LandUsage</option>-->
+<!--          <option value="6">Non Zoning</option>-->
+<!--          <option value="6">Business License</option>-->
+        </select>
+    </div>
+    <div class="col-md-3">
+        <p>County</p>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>City Council</option>
+          <option value="1">Planning Commission</option>
+          <option value="2">Board Of Adjustment</option>
+          <option value="3">Heritage Council</option>
+          <option value="4">Architecture</option>
+          <option value="5">ReDevelopment</option>
+          <option value="6">LandUsage</option>
+          <option value="6">Non Zoning</option>
+          <option value="6">Business License</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <p>City</p>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>City Council</option>
+          <option value="1">Planning Commission</option>
+          <option value="2">Board Of Adjustment</option>
+          <option value="3">Heritage Council</option>
+          <option value="4">Architecture</option>
+          <option value="5">ReDevelopment</option>
+          <option value="6">LandUsage</option>
+          <option value="6">Non Zoning</option>
+          <option value="6">Business License</option>
+        </select>
+    </div>
+<!--</form>-->
+</div>
+
+<hr>
+<div class="row">
+    <div class="col-sm-6 col-md-8">
+        <h5>Department Details</h5>
+        <hr>
+        <form method="POST">
+            <div class="mb-2">
+                <label for="Main" class="form-label">Main Website Link</label>
+                <input type="text" class="form-control" id="Main">
+            </div>
+             <div class="mb-2">
+                <label for="departlink" class="form-label">Department Link</label>
+                <input type="text" class="form-control" id="departlink">
+            </div>
+            <div class="mb-2">
+                <label for="agendaLink" class="form-label">Agenda Link</label>
+                <input type="text" class="form-control" id="agendaLink">
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-6 col-md-4">
+          <h5>File Type</h5>
+        <hr>
+        <div class="row">
+            <div class="col-3">
+                 <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Shape" value="Shape">
+                      <label class="form-check-label" for="Shape">Shape</label>
+                 </div>
+            </div>
+             <div class="col-3">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="GDALS" value="GDALS">
+                  <label class="form-check-label" for="GDALS">GDALS</label>
+                </div>
+             </div>
+        </div>
+       <div class="row">
+            <div class="col-3">
+               <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="CSV" value="CSV">
+                      <label class="form-check-label" for="CSV">CSV</label>
+               </div>
+            </div>
+             <div class="col-3">
+                <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="EXCEL" value="EXCEL">
+                      <label class="form-check-label" for="EXCEL">EXCEL</label>
+                </div>
+            </div>
+       </div>
+      <div class="row">
+            <div class="col-3">
+                <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="KMZ" value="KMZ">
+                      <label class="form-check-label" for="KMZ">KMZ</label>
+                </div>
+            </div>
+             <div class="col-3">
+                 <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="TEXT" value="TEXT">
+                      <label class="form-check-label" for="TEXT">TEXT</label>
+                </div>
+             </div>
+       </div>
+     <div class="row">
+            <div class="col-3">
+            <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="PDF" value="PDF">
+                      <label class="form-check-label" for="PDF">PDF</label>
+                </div>
+            </div>
+             <div class="col-3">
+               <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="OTHER" value="OTHER">
+                      <label class="form-check-label" for="OTHER">OTHER</label>
+                </div>
+             </div>
+       </div>
+        <div class="row">
+            <div class="mb-2">
+                <label for="Comments" class="form-label">Comments/Remarks</label>
+                <input type="text" class="form-control" id="Comments">
+
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                   <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">For Non-Zoning Data Click Here</button>
+                 </div>
+                <div class="col-md-6 col-sm-6">
+                    <label class="form-label" for="customFile">Choose File to Upload</label>
+                    <input type="file" class="form-control" id="customFile" />
+                </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add DataSet</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Category:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="mb-3">
+            <label for="message-text" class="col-form-label">Sub-Category:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+</div>
+    </div>
+<div class="row">
+    <div class="col-md-3 col-sm-6">
+        <h5>Frequency</h5>
+        <hr>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Yearly" value="Yearly">
+            <label class="form-check-label" for="Yearly">Yearly</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Monthly" value="Monthly">
+            <label class="form-check-label" for="Monthly">Monthly</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Weekly" value="Weekly">
+            <label class="form-check-label" for="Weekly">Weekly</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="BiWeekly" value="BiWeekly">
+            <label class="form-check-label" for="BiWeekly">BiWeekly</label>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <h5>Select Week</h5>
+        <hr>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Week#1" value="Week#1">
+            <label class="form-check-label" for="Week#1">Week#1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Week#2" value="Week#2">
+            <label class="form-check-label" for="Week#2">Week#2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Week#3" value="Week#3">
+            <label class="form-check-label" for="Week#3">Week#3</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Week#4" value="Week#4">
+            <label class="form-check-label" for="Week#4">Week#4</label>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <h5>Select Day</h5>
+        <hr>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>MON</option>
+          <option value="1">TUE</option>
+          <option value="2">WED</option>
+          <option value="3">THU</option>
+          <option value="4">FRI</option>
+          <option value="5">SAT</option>
+          <option value="6">Sun</option>
+        </select>
+<!--        <div class="form-check form-check-inline">-->
+<!--            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mon" value="Mon">-->
+<!--            <label class="form-check-label" for="Mon">Mon</label>-->
+<!--        </div>-->
+<!--         <div class="form-check form-check-inline">-->
+<!--            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Tue" value="Tue">-->
+<!--            <label class="form-check-label" for="Tue">Tue</label>-->
+<!--        </div>-->
+<!--        <div class="form-check form-check-inline">-->
+<!--            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Wed" value="Wed">-->
+<!--            <label class="form-check-label" for="Wed">Wed</label>-->
+<!--        </div>-->
+<!--         <div class="form-check form-check-inline">-->
+<!--            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Thu" value="Thu">-->
+<!--            <label class="form-check-label" for="Thu">Thu</label>-->
+<!--        </div>-->
+<!--        <div class="form-check form-check-inline">-->
+<!--            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Fri" value="Fri">-->
+<!--            <label class="form-check-label" for="Fri">Frid</label>-->
+<!--        </div>-->
+<!--        <div class="form-check form-check-inline">-->
+<!--            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Sat" value="Sat">-->
+<!--            <label class="form-check-label" for="Sat">Sat</label>-->
+<!--        </div>-->
+<!--        <div class="form-check form-check-inline">-->
+<!--            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Sun" value="Sun">-->
+<!--            <label class="form-check-label" for="Sun">Sun</label>-->
+<!--        </div>-->
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <h5>Website Status</h5>
+        <hr>
+        <select class="form-select" aria-label="Default select example">
+          <option selected>AT</option>
+          <option value="1">ANT</option>
+          <option value="2">MT</option>
+          <option value="3">MNT</option>
+          <option value="4">MDE</option>
+          <option value="5">SNF</option>
+          <option value="6">ANF</option>
+          <option value="7">DNF</option>
+        </select>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-3 col-sm-3">
+       <button type="button" class="btn btn-primary">Save</button>
+    </div>
+</div>
+
+
+{% endblock %}

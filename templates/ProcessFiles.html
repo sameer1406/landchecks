@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+<p>{% block title %}Process Files{% endblock %}</p>
+{% block content %}
+<div class="row">
+  <div class="col-md-6 col-sm-6">
+    <h5>Select File Records</h5>
+  </div>
+   <div class="col-md-6 col-sm-6">
+    <h5>File Records</h5>
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-4 col-sm-3">
+    <h5>Choose File Type</h5>
+    <hr>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="PDF-P" value="PDF-P">
+      <label class="form-check-label" for="PDF-P">PDF-P</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="PDF-C" value="PDF-C">
+      <label class="form-check-label" for="PDF-C">PDF-C </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="PDF-N" value="PDF-N">
+      <label class="form-check-label" for="PDF-N">PDF-N</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="PDF-H" value="PDF-H">
+      <label class="form-check-label" for="PDF-H">PDF-H</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="CSV" value="CSV">
+      <label class="form-check-label" for="CSV">CSV</label>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-5">
+    <h5>Choose Parse Type</h5>
+    <hr>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="TPP1" value="TPP1">
+      <label class="form-check-label" for="TPP1">Text Parse Processor #1</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="TPP2" value="TPP2">
+      <label class="form-check-label" for="TPP2">Image or Text Parse Processor #2</label>
+    </div>
+  </div>
+  <div class="col-md-4 col-sm-4">
+    <h5>Add Tokens</h5>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+           <input type="text" placeholder="Application Separator" class="form-control" id="AS">
+      </div>
+      <div class="col-md-6">
+           <input type="text" class="form-control" placeholder="Last Record Terminator String" id="SS">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock %}
